@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    align-items: flex-end;
+  }
+  
+  .form label {
+    margin-bottom: 20px;
+  }
+  
+  .formBtn {
+    width: 150px;
+    margin-left: auto;
+    
+  }
+  
+  .formSearch {
+    margin-bottom: 40px;
+  }
+  
+  .formInput {
+    margin-left: 20px;
+  }
+  
+  
+  .inputFormSearch {
+    margin-left: 20px;
+  }
