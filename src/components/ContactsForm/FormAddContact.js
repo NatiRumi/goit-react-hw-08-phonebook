@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addNewContact } from '../../redux/contacts/slice';
+import { addNewContact } from '../../redux/contacts/operations';
 import css from './Form.module.css';
 
 function Form() {

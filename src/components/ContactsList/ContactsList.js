@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts } from '../../redux/contacts/slice';
+import { fetchContacts } from '../../redux/contacts/operations';
 import { getContacts } from '../../redux/contacts/selectors';
 import ContactItem from '../ContactsItem/ContactsItem';
 import Loader from '../Loader/Loader';
@@ -24,7 +24,7 @@ const ContactsList = () => {
         {contacts.map(contact => (
           <ContactItem
             name={contact.name}
-            number={contact.phone}
+            number={contact.number}
             id={contact.id}
             key={contact.id}
           />
