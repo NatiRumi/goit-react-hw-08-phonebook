@@ -1,5 +1,6 @@
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import Loader from '../Loader/Loader';
 // import css from './RegisterForm.module.css';
 
 import * as React from 'react';
@@ -17,6 +18,7 @@ const defaultTheme = createTheme();
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const { isLoading } = useSelector(state => state.auth);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -130,6 +132,7 @@ export const RegisterForm = () => {
           Sign In
         </Button>
       </Box>
+      {isLoading && <Loader />}
     </Box>
   </Grid>
 </Grid>

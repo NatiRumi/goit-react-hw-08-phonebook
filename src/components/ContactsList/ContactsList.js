@@ -6,6 +6,11 @@ import ContactItem from '../ContactsItem/ContactsItem';
 import Loader from '../Loader/Loader';
 import css from './ContactsList.module.css';
 
+
+
+
+
+
 const ContactsList = () => {
   const contacts = useSelector(getContacts);
   const { isLoading, error } = useSelector(state => state.contacts);
@@ -16,6 +21,7 @@ const ContactsList = () => {
   }, [dispatch]);
 
   return (
+    
     <div className={css.contacts}>
       {isLoading && <Loader />}
       {error && <h2>Сталася помилка: {error}</h2>}
@@ -31,6 +37,8 @@ const ContactsList = () => {
         ))}
       </ul>
     </div>
+
+
   );
 };
 

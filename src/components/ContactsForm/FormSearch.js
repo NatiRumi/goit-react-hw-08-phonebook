@@ -7,15 +7,17 @@ const FormSearch = () => {
   const dispatch = useDispatch();
 
   return (
-    <label className={css.formSearch}>
-      Find contacts by name
-      <input
-        type="text"
-        name="filter"
-        onChange={e => dispatch(filterContact(e.currentTarget.value))}
-        className={css.inputFormSearch}
-      />
-    </label>
+    <div className={css.formSearch}>
+      <label>
+        Find contacts by name
+        <input
+          type="text"
+          name="filter"
+          onChange={e => dispatch(filterContact(e.currentTarget.value))}
+          className={css.inputFormSearch}
+        />
+      </label>
+    </div>
   );
 };
 
